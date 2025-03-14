@@ -1,0 +1,366 @@
+
+
+/* Global Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #fff;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: cyan; /* Glowing Cyan */
+}
+
+section {
+  padding: 100px 20px;
+  text-align: center;
+  margin-top: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+h1, h2, h3 {
+  color: #fff;
+  transition: color 0.5s ease;
+}
+
+
+/* Profile Picture */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #323236, 0 0 40px #ff0055, 0 0 60px #ff0800;
+  animation: glowAnimation 2s infinite alternate;
+}
+
+/* Glowing Animation */
+@keyframes glowAnimation {
+  0% {
+      box-shadow: 0 0 20px #02147a, 0 0 40px #ff0080, 0 0 60px #00eeff;
+  }
+  100% {
+      box-shadow: 0 0 30px #002df5, 0 0 50px #006eff, 0 0 80px #ff0037;
+  }
+}
+/* Social Media Icons Styling */
+.social-media {
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  font-size: 30px;
+  margin: 0 15px;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon i {
+  transition: transform 0.3s ease;
+}
+
+/* Glowing Effect for Social Icons */
+.social-icon:hover {
+  color: cyan; /* Glowing color */
+  transform: scale(1.2); /* Slightly enlarge the icon */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Glowing cyan effect */
+}
+
+/* Specific Icon Colors */
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: #333;
+}
+
+.twitter:hover {
+  color: #1DA1F2;
+}
+
+.instagram:hover {
+  color: #e4405f;
+}
+/* About Section Styling */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.about-img {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-text {
+  flex: 2;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Profile Image */
+.profile {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0); /* Initial shadow */
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* Smooth scaling of the image */
+}
+
+/* Glowing effect for profile image */
+.profile:hover .profile-img {
+  box-shadow: 0 0 25px 10px rgba(0, 255, 255, 0.8); /* Glowing cyan effect */
+  transform: scale(1.1); /* Slightly scale the image */
+}
+
+/* Glowing effect animation */
+.profile:hover {
+  animation: glowMove 2s infinite alternate ease-in-out; /* Smooth glowing effect */
+}
+
+/* Keyframes for smooth glowing movement */
+@keyframes glowMove {
+  0% {
+    box-shadow: 0 0 25px 10px rgba(0, 255, 255, 0.8); /* Cyan glow */
+  }
+  50% {
+    box-shadow: 0 0 30px 15px rgba(255, 105, 180, 0.8); /* Pink glow */
+  }
+  100% {
+    box-shadow: 0 0 25px 10px rgba(255, 20, 147, 0.8); /* Red glow */
+  }
+}
+
+
+
+/* Service Section */
+#service {
+  background-color: #222;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #444;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Cyan glowing effect */
+}
+
+/* Skills Section */
+#skills {
+  background-color: #222;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill {
+  width: 30%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.html {
+  width: 90%;
+  background-color: #4caf50; /* Green for HTML */
+}
+
+.css {
+  width: 80%;
+  background-color: #2196f3; /* Blue for CSS */
+}
+
+.js {
+  width: 70%;
+  background-color: #4caf50; /* Red for JavaScript */
+}
+
+/* Projects Section */
+#projects {
+  background-color: #222;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover img {
+  transform: scale(1.05);
+}
+
+
+/* Social Media Icons Styling */
+.social-media {
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  font-size: 30px;
+  margin: 0 15px;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon i {
+  transition: transform 0.3s ease;
+}
+
+/* Glowing Effect for Social Icons */
+.social-icon:hover {
+  color: cyan; /* Glowing color */
+  transform: scale(1.2); /* Slightly enlarge the icon */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Glowing cyan effect */
+}
+
+/* Specific Icon Colors */
+.linkedin:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: #333;
+}
+
+.twitter:hover {
+  color: #1DA1F2;
+}
+
+.instagram:hover {
+  color: #e4405f;
+}
+/* Contact Section */
+#contact {
+  background-color: #222;
+}
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #091970;
+}
+
+/* Glowing Submit Button */
+.submit-btn {
+  background-color: #2196f3; /* Blue color */
+  color: rgb(76, 75, 141);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.7); /* Glowing cyan effect */
+}
+
+
